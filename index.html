@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TeamVenky | Elite Personal Fitness Coaching in Coimbatore & Online</title>
+  <meta name="description" content="1-to-1 fitness coaching for fat loss, muscle gain, natural bodybuilding and body transformation in Coimbatore and online by Coach Venkatesh K." />
+  
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800&family=Manrope:wght@400;500;600;700;800&family=Mukta+Malar:wght@500;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              darkest: '#070709',
+              dark: '#0d0d11',
+              surface: '#141419',
+              card: '#181820',
+              gold: '#f59e0b',
+              goldHover: '#d97707',
+              saffron: '#f97316',
+              crimson: '#e11d48'
+            }
+          },
+          fontFamily: {
+            display: ['"Barlow Condensed"', 'sans-serif'],
+            body: ['"Manrope"', 'sans-serif'],
+            tamil: ['"Mukta Malar"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Design System Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-[#0d0d11] text-slate-100 font-body selection:bg-white text-black selection:text-black">
+
+  <!-- Ambient Top Glow -->
+  <div class="ambient-glow-top"></div>
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0d0d11]/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo (Official TeamVenky Logo) -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/teamvenky-logo.png" alt="TEAMVENKY" class="h-9 sm:h-11 w-auto object-contain" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-8 font-display text-base font-bold tracking-wider uppercase">
+        <a href="index.html" class="text-white transition-colors">Home</a>
+        <a href="about.html" class="text-slate-300 hover:text-white transition-colors">About Coach</a>
+        <a href="programs.html" class="text-slate-300 hover:text-white transition-colors">Programs</a>
+        <a href="transformations.html" class="text-slate-300 hover:text-white transition-colors">Transformations</a>
+        <a href="consultation.html" class="text-slate-300 hover:text-white transition-colors">Consultation</a>
+        <a href="#faq" class="text-slate-300 hover:text-white transition-colors">FAQ</a>
+      </nav>
+
+      <!-- Desktop CTA & Tamil Nadu Indicator -->
+      <div class="hidden lg:flex items-center gap-4">
+        <div class="hidden xl:flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-display font-bold uppercase tracking-widest text-white">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          Coimbatore, TN
+        </div>
+        <a href="consultation.html" class="btn-primary py-2.5 px-5 text-sm">Start Your Transformation</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileNavToggle" aria-label="Open Navigation Menu" class="lg:hidden p-2 rounded-md bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileNavMenu" class="hidden fixed inset-0 z-[100] bg-[#070709]/98 backdrop-blur-xl flex flex-col justify-between p-6 overflow-y-auto">
+    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/teamvenky-logo.png" alt="TEAMVENKY" class="h-8 w-auto object-contain" />
+      </a>
+      <button id="mobileNavClose" aria-label="Close Navigation Menu" class="p-2 rounded-full bg-white/10 text-slate-300 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-5 py-8 font-display text-2xl font-bold uppercase tracking-wide">
+      <a href="index.html" class="text-white">Home</a>
+      <a href="about.html" class="text-slate-200 hover:text-white">About Venkatesh</a>
+      <a href="programs.html" class="text-slate-200 hover:text-white">Coaching Programs</a>
+      <a href="transformations.html" class="text-slate-200 hover:text-white">Client Transformations</a>
+      <a href="consultation.html" class="text-slate-200 hover:text-white">Book Consultation</a>
+      <a href="#faq" class="text-slate-200 hover:text-white">FAQs</a>
+    </nav>
+
+    <div class="flex flex-col gap-3 pt-6 border-t border-white/10">
+      <a href="consultation.html" class="btn-primary w-full text-center">Start Your Transformation</a>
+      <a href="https://wa.me/919876543210?text=Hi%20TeamVenky,%20I'm%20interested%20in%201-to-1%20fitness%20coaching." target="_blank" class="btn-whatsapp w-full text-center">Chat on WhatsApp</a>
+    </div>
+  </div>
+
+  <main class="pt-20">
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative min-h-[92vh] flex items-center overflow-hidden py-12 lg:py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Copy & Actions (Optimized for 5-second Instagram conversion) -->
+          <div class="lg:col-span-7 flex flex-col items-start space-y-4 sm:space-y-6">
+            
+            <!-- Brand Badge -->
+            <div class="tn-badge">
+              <span class="tn-dot"></span>
+              <span>TEAMVENKY • COIMBATORE, TAMIL NADU</span>
+            </div>
+
+            <!-- Main Headline & Positioning -->
+            <div class="space-y-2">
+              <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black uppercase tracking-tight text-white leading-[0.96]">
+                Elite 1-to-1 <br class="hidden sm:inline" />
+                <span class="text-chrome-gradient">Fitness Coaching</span>
+              </h1>
+              
+              <!-- What He Offers: 3 Core Pillars -->
+              <p class="font-display text-base sm:text-xl font-bold uppercase tracking-wider text-white">
+                Fat Loss &bull; Muscle Gain &bull; Natural Bodybuilding
+              </p>
+            </div>
+
+            <!-- Concise Supporting Pitch -->
+            <p class="text-sm sm:text-lg text-slate-300 max-w-2xl font-light leading-relaxed">
+              Personalized 1-on-1 coaching by Coach Venkatesh K. No generic diets. No guesswork. Just science, discipline, and direct personal accountability.
+            </p>
+
+            <!-- Focused 2-Button Action Block -->
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto pt-1">
+              <a href="consultation.html" class="btn-primary text-center py-3.5 px-6 text-sm sm:text-base font-black">
+                <span>START YOUR TRANSFORMATION</span>
+                <svg class="w-5 h-5 inline ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+              <a href="https://wa.me/919876543210?text=Hi%20TeamVenky,%20I'm%20interested%20in%201-to-1%20fitness%20coaching." target="_blank" class="btn-whatsapp text-center py-3.5 px-6 text-sm sm:text-base font-black">
+                <svg class="w-5 h-5 inline mr-1 fill-current" viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.03C9.36 7.03 9.08 7.09 8.84 7.35C8.61 7.61 7.94 8.23 7.94 9.5C7.94 10.77 8.86 12 9 12.18C9.13 12.35 10.8 14.93 13.35 16.03C15.48 16.95 15.91 16.76 16.37 16.72C16.83 16.68 17.85 16.12 18.06 15.53C18.27 14.94 18.27 14.43 18.21 14.33C18.15 14.23 17.98 14.17 17.72 14.04C17.47 13.92 16.23 13.31 16 13.23C15.77 13.14 15.61 13.1 15.44 13.35C15.28 13.61 14.8 14.17 14.65 14.34C14.5 14.51 14.36 14.53 14.1 14.41C13.85 14.28 13.04 14.02 12.09 13.17C11.35 12.5 10.85 11.68 10.71 11.43C10.56 11.17 10.7 11.04 10.82 10.91C10.94 10.79 11.08 10.6 11.21 10.45C11.34 10.3 11.38 10.19 11.47 10.02C11.55 9.85 11.51 9.71 11.45 9.58C11.39 9.45 10.92 8.31 10.73 7.85C10.54 7.4 10.35 7.46 10.2 7.45C10.06 7.44 9.9 7.44 9.73 7.44C9.57 7.44 9.36 7.03 9.53 7.03Z"/></svg>
+                <span>WhatsApp Coach</span>
+              </a>
+            </div>
+
+            <!-- Immediate 5-Second Mobile Proof Strip -->
+            <div class="w-full pt-4 border-t border-white/10">
+              <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-display font-bold uppercase tracking-wider text-xs sm:text-sm text-slate-300">
+                <div class="flex items-center gap-1">
+                  <span class="text-white font-black text-sm sm:text-base">13.5K+</span>
+                  <span class="text-slate-400">Community</span>
+                </div>
+                <span class="text-white/30">•</span>
+                <div class="flex items-center gap-1">
+                  <span class="text-white font-black text-sm sm:text-base">100+</span>
+                  <span class="text-slate-400">Transformations</span>
+                </div>
+                <span class="text-white/30">•</span>
+                <div class="flex items-center gap-1">
+                  <span class="text-white font-black text-sm sm:text-base">Online + Offline</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Hero Real Photography -->
+          <div class="lg:col-span-5 relative">
+            <div class="relative mx-auto max-w-md lg:max-w-none">
+              
+              <!-- Subtle Background Backdrop Glow -->
+              <div class="absolute -inset-4 bg-gradient-to-tr from-white/10 to-white/5 rounded-2xl filter blur-2xl opacity-70 -z-10"></div>
+              
+              <!-- Frame -->
+              <div class="relative rounded-2xl overflow-hidden border border-white/15 bg-surface-card shadow-2xl">
+                <img 
+                  src="assets/images/hero-venkatesh.jpg" 
+                  alt="Coach Venkatesh K - Elite Fitness Coach Coimbatore" 
+                  class="w-full h-80 sm:h-[480px] lg:h-[560px] object-cover object-top filter contrast-[1.05]"
+                  loading="eager"
+                />
+                
+                <!-- Coach Tag Overlay -->
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#070709] via-[#070709]/80 to-transparent p-6 pt-16">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h3 class="font-display text-2xl font-black text-white tracking-wide uppercase">Venkatesh K</h3>
+                      <p class="text-white text-xs font-display uppercase tracking-widest font-bold">Founder & Head Coach • TeamVenky</p>
+                    </div>
+                    <div class="px-3 py-1 rounded bg-white/10 border border-white/25 text-white text-xs font-display uppercase tracking-wider font-bold">
+                      Coimbatore, TN
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Floating Authentic Review Badge (Safe within mobile container) -->
+              <div class="absolute bottom-3 left-3 sm:-bottom-5 sm:-left-6 bg-[#181820]/95 backdrop-blur-md border border-white/15 rounded-lg p-3 sm:p-4 shadow-xl flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Natural Bodybuilder</div>
+                  <div class="text-sm font-bold text-white font-display uppercase">100% Natural Coaching</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. TRUST STRIP -->
+    <section class="border-y border-white/10 bg-[#070709] py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="flex flex-col items-center justify-center p-2">
+            <span class="font-display text-4xl sm:text-5xl font-black text-white stat-counter" data-target="13.5" data-suffix="K+">13.5K+</span>
+            <span class="text-xs uppercase tracking-widest text-slate-400 font-bold font-display mt-1">Instagram Followers (@venkateshkofficial)</span>
+          </div>
+          <div class="flex flex-col items-center justify-center p-2">
+            <span class="font-display text-4xl sm:text-5xl font-black text-white stat-counter" data-target="100" data-suffix="+">100+</span>
+            <span class="text-xs uppercase tracking-widest text-slate-400 font-bold font-display mt-1">Client Transformations</span>
+          </div>
+          <div class="flex flex-col items-center justify-center p-2">
+            <span class="font-display text-4xl sm:text-5xl font-black text-white">1-on-1</span>
+            <span class="text-xs uppercase tracking-widest text-slate-400 font-bold font-display mt-1">Dedicated Personal Accountability</span>
+          </div>
+          <div class="flex flex-col items-center justify-center p-2">
+            <span class="font-display text-4xl sm:text-5xl font-black text-white">ONLINE + OFFLINE</span>
+            <span class="text-xs uppercase tracking-widest text-slate-400 font-bold font-display mt-1">Coimbatore & Worldwide</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. ABOUT COACH SECTION (Featuring User Specified Founder Image 7831) -->
+    <section id="about" class="py-20 lg:py-28 bg-[#0d0d11] relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Founder Main Photo (User Specified 496623949_...8228464524478177831_n.jpg) -->
+          <div class="lg:col-span-5 order-2 lg:order-1">
+            <div class="relative group">
+              <!-- Frame & Glow -->
+              <div class="absolute -inset-2 bg-gradient-to-r from-white/20 to-white/5 rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition duration-500"></div>
+              <div class="relative rounded-xl overflow-hidden border border-white/20 bg-surface-card shadow-2xl">
+                <img 
+                  src="assets/images/founder-venkatesh.jpg" 
+                  alt="Venkatesh K - Founder and Head Coach of TeamVenky" 
+                  class="w-full h-auto aspect-square object-cover filter contrast-[1.03]"
+                />
+                <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-6">
+                  <div class="font-display font-black text-xl text-white uppercase tracking-wider">Venkatesh K</div>
+                  <div class="text-white text-xs font-display uppercase tracking-widest font-bold">Elite Coach & Natural Athlete • Coimbatore</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coach Philosophy & Bio -->
+          <div class="lg:col-span-7 order-1 lg:order-2 flex flex-col items-start space-y-6">
+            <div class="tn-badge">
+              <span class="tn-dot"></span>
+              <span>Meet Your Coach</span>
+            </div>
+
+            <h2 class="font-display text-4xl sm:text-6xl font-black uppercase text-white leading-tight">
+              No Generic Plans. <br />
+              <span class="text-chrome-gradient">A Plan Built for You.</span>
+            </h2>
+
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+              Every person has a different body, schedule, work lifestyle, and nutritional preference. At <strong class="text-white font-semibold">TeamVenky</strong>, we do not believe in copy-paste workout spreadsheets or crash diets that ruin your metabolism.
+            </p>
+            <p class="text-slate-300 text-base sm:text-lg leading-relaxed font-light">
+              Based out of <strong class="text-white font-semibold">Coimbatore, Tamil Nadu</strong>, I provide hands-on, high-accountability coaching for clients seeking sustainable fat loss, clean muscle building, and natural athletic conditioning.
+            </p>
+
+            <!-- 3 Core Principles -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full pt-4">
+              <div class="p-4 rounded bg-white/5 border border-white/10">
+                <div class="font-display text-2xl font-black text-white">01. Custom</div>
+                <p class="text-xs text-slate-300 mt-1 font-medium">Diet & training crafted precisely for your body type and food culture.</p>
+              </div>
+              <div class="p-4 rounded bg-white/5 border border-white/10">
+                <div class="font-display text-2xl font-black text-white">02. Direct</div>
+                <p class="text-xs text-slate-300 mt-1 font-medium">Daily/weekly accountability directly with Venkatesh, not an assistant.</p>
+              </div>
+              <div class="p-4 rounded bg-white/5 border border-white/10">
+                <div class="font-display text-2xl font-black text-white">03. Real</div>
+                <p class="text-xs text-slate-300 mt-1 font-medium">100% natural methods with sustainable habits for lifelong results.</p>
+              </div>
+            </div>
+
+            <div class="pt-4 flex items-center gap-4">
+              <a href="about.html" class="btn-primary">Read Full Story</a>
+              <a href="https://instagram.com/venkateshkofficial" target="_blank" class="btn-secondary">
+                <span>@venkateshkofficial</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. PROGRAMS SECTION (6 Core Offerings) -->
+    <section id="programs" class="py-20 lg:py-28 bg-[#070709] border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <div class="tn-badge mx-auto">
+            <span class="tn-dot"></span>
+            <span>Targeted Fitness Coaching</span>
+          </div>
+          <h2 class="font-display text-4xl sm:text-6xl font-black uppercase text-white">
+            Choose Your <span class="text-chrome-gradient">Transformation Goal</span>
+          </h2>
+          <p class="text-slate-400 text-base sm:text-lg">
+            Whether your goal is dropping stubborn visceral fat, packing on lean athletic muscle, or preparing for the competition stage.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Program 1: Fat Loss -->
+          <div class="card-dark group flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="h-48 rounded overflow-hidden relative">
+                <img src="assets/images/fat-loss.jpg" alt="Fat Loss Coaching" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <span class="absolute top-3 left-3 bg-white text-black text-black text-xs font-display font-black uppercase px-2.5 py-1 rounded">High Demand</span>
+              </div>
+              <h3 class="font-display text-2xl font-bold text-white uppercase group-hover:text-white transition-colors">Fat Loss & Shred</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Lose stubborn body fat while preserving lean muscle. Customized calorie budgeting with authentic South Indian & Indian dietary flexibility.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+              <span class="text-xs font-display uppercase tracking-widest text-slate-500 font-bold">12 - 16 Weeks</span>
+              <a href="programs.html#fat-loss" class="text-white font-display font-bold uppercase text-sm hover:underline">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Program 2: Muscle Gain -->
+          <div class="card-dark group flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="h-48 rounded overflow-hidden relative">
+                <img src="assets/images/muscle-gain.jpg" alt="Muscle Gain Program" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <span class="absolute top-3 left-3 bg-white/20 backdrop-blur-md text-white text-xs font-display font-black uppercase px-2.5 py-1 rounded">Hypertrophy</span>
+              </div>
+              <h3 class="font-display text-2xl font-bold text-white uppercase group-hover:text-white transition-colors">Lean Muscle Gain</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Structured progressive overload protocols to pack on dense muscle mass, fix muscle imbalances, and dramatically increase your core strength.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+              <span class="text-xs font-display uppercase tracking-widest text-slate-500 font-bold">16 - 24 Weeks</span>
+              <a href="programs.html#muscle-gain" class="text-white font-display font-bold uppercase text-sm hover:underline">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Program 3: Natural Bodybuilding & Contest Prep -->
+          <div class="card-dark group flex flex-col justify-between border-white/20">
+            <div class="space-y-4">
+              <div class="h-48 rounded overflow-hidden relative">
+                <img src="assets/images/contest-prep.jpg" alt="Contest Prep & Posing" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <span class="absolute top-3 left-3 bg-red-600 text-white text-xs font-display font-black uppercase px-2.5 py-1 rounded">Elite Stage</span>
+              </div>
+              <h3 class="font-display text-2xl font-bold text-white uppercase group-hover:text-white transition-colors">Natural Bodybuilding & Posing</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Comprehensive stage conditioning, peak week manipulation, posing symmetry, and athletic conditioning guided by Venkatesh's own competitive experience.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+              <span class="text-xs font-display uppercase tracking-widest text-slate-500 font-bold">Custom Timeline</span>
+              <a href="programs.html#contest-prep" class="text-white font-display font-bold uppercase text-sm hover:underline">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Program 4: Total Body Transformation -->
+          <div class="card-dark group flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="h-48 rounded overflow-hidden relative">
+                <img src="assets/images/transformation-03.jpg" alt="Total Body Transformation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <span class="absolute top-3 left-3 bg-white text-black text-black text-xs font-display font-black uppercase px-2.5 py-1 rounded">Flagship</span>
+              </div>
+              <h3 class="font-display text-2xl font-bold text-white uppercase group-hover:text-white transition-colors">Total Body Transformation</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                A complete physical and mental overhaul for busy professionals, entrepreneurs, and athletes. Body recomposition that turns heads.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+              <span class="text-xs font-display uppercase tracking-widest text-slate-500 font-bold">12 - 24 Weeks</span>
+              <a href="programs.html#transformation" class="text-white font-display font-bold uppercase text-sm hover:underline">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Program 5: Online Elite Coaching -->
+          <div class="card-dark group flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="h-48 rounded overflow-hidden relative">
+                <img src="assets/images/online-coaching.jpg" alt="Online Fitness Coaching" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <span class="absolute top-3 left-3 bg-blue-500 text-white text-xs font-display font-black uppercase px-2.5 py-1 rounded">Global Access</span>
+              </div>
+              <h3 class="font-display text-2xl font-bold text-white uppercase group-hover:text-white transition-colors">Online Elite 1-to-1</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Train from anywhere in the world (India, UAE, Singapore, US). Weekly video form analysis, diet recalibration, and direct WhatsApp mentoring.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+              <span class="text-xs font-display uppercase tracking-widest text-slate-500 font-bold">Monthly / Quarterly</span>
+              <a href="programs.html#online" class="text-white font-display font-bold uppercase text-sm hover:underline">Learn More →</a>
+            </div>
+          </div>
+
+          <!-- Program 6: Offline & Home Personal Training -->
+          <div class="card-dark group flex flex-col justify-between">
+            <div class="space-y-4">
+              <div class="h-48 rounded overflow-hidden relative">
+                <img src="assets/images/home-training.jpg" alt="Home Personal Training Coimbatore" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+                <span class="absolute top-3 left-3 bg-emerald-500 text-black text-xs font-display font-black uppercase px-2.5 py-1 rounded">Coimbatore Only</span>
+              </div>
+              <h3 class="font-display text-2xl font-bold text-white uppercase group-hover:text-white transition-colors">Home & Offline Personal Training</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">
+                Exclusive in-person coaching at your residence or premium partner gym in Coimbatore. Hands-on biomechanics, real-time spotting, and motivation.
+              </p>
+            </div>
+            <div class="pt-6 border-t border-white/10 mt-6 flex items-center justify-between">
+              <span class="text-xs font-display uppercase tracking-widest text-slate-500 font-bold">Limited Slots</span>
+              <a href="programs.html#offline" class="text-white font-display font-bold uppercase text-sm hover:underline">Learn More →</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-12">
+          <a href="programs.html" class="btn-primary">View All Program Curriculums & Details</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. INTERACTIVE BEFORE / AFTER TRANSFORMATIONS SPOTLIGHT -->
+    <section id="transformations" class="py-20 lg:py-28 bg-[#0d0d11] relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+          <div class="lg:col-span-6 space-y-4">
+            <div class="tn-badge">
+              <span class="tn-dot"></span>
+              <span>Proven Client Results</span>
+            </div>
+            <h2 class="font-display text-4xl sm:text-6xl font-black uppercase text-white">
+              Real People. Real Work. <br />
+              <span class="text-chrome-gradient">Real Transformations.</span>
+            </h2>
+            <p class="text-slate-300 text-base sm:text-lg font-light leading-relaxed">
+              No photoshopped waistlines, no misleading angles. These are actual TeamVenky athletes and clients from Coimbatore, Chennai, and across India who put in the daily work.
+            </p>
+          </div>
+          <div class="lg:col-span-6 flex lg:justify-end items-center gap-4">
+            <a href="transformations.html" class="btn-secondary">Browse Full Gallery (50+ Transformations)</a>
+          </div>
+        </div>
+
+        <!-- Interactive Slider & Gallery Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Left: Interactive Drag Slider -->
+          <div class="lg:col-span-6">
+            <div class="ba-container">
+              <!-- Background / Before Image -->
+              <img src="assets/images/transformation-before.jpg" alt="Client Before Transformation" class="ba-img" />
+              <span class="ba-badge ba-badge-before">Before</span>
+
+              <!-- Foreground / After Image (clipped) -->
+              <div class="ba-after-wrapper">
+                <img src="assets/images/transformation-after.jpg" alt="Client After Transformation" class="ba-img" />
+                <span class="ba-badge ba-badge-after">After (16 Wks)</span>
+              </div>
+
+              <!-- Draggable Divider Handle -->
+              <div class="ba-slider-handle" title="Drag to compare">
+                <svg class="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 9l4-4 4 4m0 6l-4 4-4-4"></path>
+                </svg>
+              </div>
+            </div>
+            <p class="text-center text-xs text-slate-400 font-display uppercase tracking-widest mt-3">
+              ← Drag or tap slider to compare Before & After →
+            </p>
+          </div>
+
+          <!-- Right: Grid of Recent Client Proof -->
+          <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+            
+            <div class="rounded-lg overflow-hidden border border-white/10 bg-surface-card relative group">
+              <img src="assets/images/transformation-01.jpg" alt="Client Result 1" class="w-full h-64 object-cover object-top group-hover:scale-105 transition duration-300" />
+              <div class="absolute bottom-0 inset-x-0 bg-black/80 p-3">
+                <div class="text-xs font-display font-black text-white uppercase">Weight Loss & Recomp</div>
+                <div class="text-[11px] text-slate-300">12 Weeks • Coimbatore</div>
+              </div>
+            </div>
+
+            <div class="rounded-lg overflow-hidden border border-white/10 bg-surface-card relative group">
+              <img src="assets/images/transformation-02.jpg" alt="Client Result 2" class="w-full h-64 object-cover object-top group-hover:scale-105 transition duration-300" />
+              <div class="absolute bottom-0 inset-x-0 bg-black/80 p-3">
+                <div class="text-xs font-display font-black text-white uppercase">Hypertrophy & Shred</div>
+                <div class="text-[11px] text-slate-300">16 Weeks • Online Coaching</div>
+              </div>
+            </div>
+
+            <div class="rounded-lg overflow-hidden border border-white/10 bg-surface-card relative group">
+              <img src="assets/images/transformation-04.jpg" alt="Client Result 3" class="w-full h-64 object-cover object-top group-hover:scale-105 transition duration-300" />
+              <div class="absolute bottom-0 inset-x-0 bg-black/80 p-3">
+                <div class="text-xs font-display font-black text-white uppercase">Natural Contest Prep</div>
+                <div class="text-[11px] text-slate-300">Stage Conditioning</div>
+              </div>
+            </div>
+
+            <div class="rounded-lg overflow-hidden border border-white/10 bg-surface-card relative group">
+              <img src="assets/images/transformation-06.jpg" alt="Client Result 4" class="w-full h-64 object-cover object-top group-hover:scale-105 transition duration-300" />
+              <div class="absolute bottom-0 inset-x-0 bg-black/80 p-3">
+                <div class="text-xs font-display font-black text-white uppercase">Complete Fat Loss</div>
+                <div class="text-[11px] text-slate-300">Sustainable Habit Shift</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. HOW IT WORKS (4 Clear Steps) -->
+    <section class="py-20 bg-[#070709] border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+          <div class="tn-badge mx-auto">
+            <span class="tn-dot"></span>
+            <span>Simple 4-Step Process</span>
+          </div>
+          <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-white">
+            Your Transformation <span class="text-chrome-gradient">Starts Here</span>
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <div class="card-dark relative">
+            <div class="font-display text-6xl font-black text-white/20 mb-2">01</div>
+            <h3 class="font-display text-xl font-bold uppercase text-white mb-2">Consultation Form</h3>
+            <p class="text-slate-400 text-sm">Tell us about your fitness targets, lifestyle, food habits, and current daily schedule.</p>
+          </div>
+
+          <div class="card-dark relative">
+            <div class="font-display text-6xl font-black text-white/20 mb-2">02</div>
+            <h3 class="font-display text-xl font-bold uppercase text-white mb-2">Fitness Assessment</h3>
+            <p class="text-slate-400 text-sm">Venkatesh reviews your posture, strength baselines, metabolic history, and limitations.</p>
+          </div>
+
+          <div class="card-dark relative">
+            <div class="font-display text-6xl font-black text-white/20 mb-2">03</div>
+            <h3 class="font-display text-xl font-bold uppercase text-white mb-2">Personalized Plan</h3>
+            <p class="text-slate-400 text-sm">Receive your targeted training protocol and calorie-adjusted nutrition strategy.</p>
+          </div>
+
+          <div class="card-dark relative">
+            <div class="font-display text-6xl font-black text-white/20 mb-2">04</div>
+            <h3 class="font-display text-xl font-bold uppercase text-white mb-2">Track & Transform</h3>
+            <p class="text-slate-400 text-sm">Weekly check-ins, form corrections, and constant adjustments to ensure continuous progress.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. BRANDED CONSULTATION ASSESSMENT FORM (Replaces Google Form) -->
+    <section id="consultation" class="py-20 lg:py-28 bg-[#0d0d11] relative border-t border-white/10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="card-dark border-white/25 p-6 sm:p-12 relative">
+          
+          <div class="text-center space-y-3 mb-10">
+            <div class="tn-badge mx-auto">
+              <span class="tn-dot"></span>
+              <span>1-on-1 Coaching Application</span>
+            </div>
+            <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-white">
+              Start Your <span class="text-chrome-gradient">Transformation</span>
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto">
+              Fill out this confidential coaching enquiry. Coach Venkatesh will personally evaluate your goals and respond within 24 hours.
+            </p>
+          </div>
+
+          <form id="consultationForm" class="space-y-6">
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="form-label">Full Name *</label>
+                <input type="text" name="name" required placeholder="e.g. Karthik Raman" class="form-input" />
+              </div>
+              <div>
+                <label class="form-label">WhatsApp Phone Number *</label>
+                <input type="tel" name="phone" required placeholder="e.g. +91 98765 43210" class="form-input" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="form-label">Email Address</label>
+                <input type="email" name="email" placeholder="e.g. karthik@example.com" class="form-input" />
+              </div>
+              <div>
+                <label class="form-label">Location / City *</label>
+                <input type="text" name="location" placeholder="e.g. Coimbatore, Chennai, Bangalore" class="form-input" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="form-label">Primary Fitness Goal *</label>
+                <select name="goal" class="form-input bg-[#141419]">
+                  <option value="Fat Loss & Shredding">Fat Loss & Shredding</option>
+                  <option value="Muscle Hypertrophy & Bulk">Muscle Hypertrophy & Size</option>
+                  <option value="Total Body Recomposition">Total Body Recomposition</option>
+                  <option value="Natural Bodybuilding / Stage Prep">Natural Bodybuilding / Stage Prep</option>
+                  <option value="General Strength & Health">General Strength & Mobility</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">Coaching Preference *</label>
+                <select name="trainingType" class="form-input bg-[#141419]">
+                  <option value="Online Elite Coaching (Anywhere)">Online Elite Coaching (Worldwide)</option>
+                  <option value="Offline Personal Training (Coimbatore Gym)">Offline Personal Training (Coimbatore)</option>
+                  <option value="Home Personal Training (Coimbatore Residence)">Home Personal Training (Coimbatore)</option>
+                  <option value="Need Guidance on Which Fits Me">Need Guidance on Which Fits Me</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div>
+                <label class="form-label">Weekly Training Commitment *</label>
+                <select name="commitment" class="form-input bg-[#141419]">
+                  <option value="3 Days per week">3 Days per week</option>
+                  <option value="4 Days per week" selected>4 Days per week</option>
+                  <option value="5-6 Days per week">5-6 Days per week</option>
+                  <option value="Flexible / Irregular Shift">Flexible / Irregular Shift</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="form-label">Previous Workout Experience</label>
+                <select name="experience" class="form-input bg-[#141419]">
+                  <option value="Complete Beginner (<6 Months)">Complete Beginner (<6 Months)</option>
+                  <option value="Intermediate (1-3 Years)">Intermediate (1-3 Years)</option>
+                  <option value="Advanced / Past Athlete (3+ Years)">Advanced / Past Athlete (3+ Years)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label">Medical Conditions / Injuries (if any)</label>
+              <input type="text" name="medical" placeholder="e.g. Lower back pain, shoulder impingement, None" class="form-input" />
+              <span class="text-[11px] text-slate-500 mt-1 block">Responsible fitness coaching. We do not provide medical diagnosis or treatment.</span>
+            </div>
+
+            <div>
+              <label class="form-label">What is your biggest current fitness challenge?</label>
+              <textarea name="notes" rows="3" placeholder="e.g. Inconsistent diet, struggling to lose belly fat, not knowing proper form..." class="form-input"></textarea>
+            </div>
+
+            <div class="flex items-start gap-3 pt-2">
+              <input type="checkbox" id="consent" required class="mt-1 w-4 h-4 rounded text-white focus:ring-white bg-white/5 border-white/20" />
+              <label for="consent" class="text-xs text-slate-400 leading-normal">
+                I understand that this enquiry will be sent directly to Coach Venkatesh K for personal coaching evaluation.
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary w-full py-4 text-lg font-black tracking-wider">
+              Submit My Coaching Enquiry & Send via WhatsApp
+            </button>
+
+            <p class="text-center text-xs text-slate-500">
+              🔒 100% Confidential. You will receive a direct reply from Coach Venkatesh within 24 hours.
+            </p>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8. INSTAGRAM SOCIAL WALL -->
+    <section class="py-20 bg-[#070709] border-t border-white/10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-4">
+          <div>
+            <div class="tn-badge">
+              <span class="tn-dot"></span>
+              <span>Daily Motivation & Workouts</span>
+            </div>
+            <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-white mt-2">
+              Follow The Journey <span class="text-white">@venkateshkofficial</span>
+            </h2>
+          </div>
+          <a href="https://instagram.com/venkateshkofficial" target="_blank" class="btn-secondary">
+            <span>Follow on Instagram</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <a href="https://instagram.com/venkateshkofficial" target="_blank" class="rounded overflow-hidden relative group aspect-square bg-surface-card border border-white/10">
+            <img src="assets/images/insta-01.jpg" alt="TeamVenky Post 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+          </a>
+
+          <a href="https://instagram.com/venkateshkofficial" target="_blank" class="rounded overflow-hidden relative group aspect-square bg-surface-card border border-white/10">
+            <img src="assets/images/insta-02.jpg" alt="TeamVenky Post 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+          </a>
+
+          <a href="https://instagram.com/venkateshkofficial" target="_blank" class="rounded overflow-hidden relative group aspect-square bg-surface-card border border-white/10">
+            <img src="assets/images/insta-03.jpg" alt="TeamVenky Post 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+          </a>
+
+          <a href="https://instagram.com/venkateshkofficial" target="_blank" class="rounded overflow-hidden relative group aspect-square bg-surface-card border border-white/10">
+            <img src="assets/images/insta-04.jpg" alt="TeamVenky Post 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+          </a>
+
+          <a href="https://instagram.com/venkateshkofficial" target="_blank" class="rounded overflow-hidden relative group aspect-square bg-surface-card border border-white/10">
+            <img src="assets/images/insta-05.jpg" alt="TeamVenky Post 5" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+          </a>
+
+          <a href="https://instagram.com/venkateshkofficial" target="_blank" class="rounded overflow-hidden relative group aspect-square bg-surface-card border border-white/10">
+            <img src="assets/images/insta-06.jpg" alt="TeamVenky Post 6" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 9. FREQUENTLY ASKED QUESTIONS (FAQ) -->
+    <section id="faq" class="py-20 bg-[#0d0d11] border-t border-white/10">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center space-y-3 mb-12">
+          <div class="tn-badge mx-auto">
+            <span class="tn-dot"></span>
+            <span>Common Questions</span>
+          </div>
+          <h2 class="font-display text-4xl sm:text-5xl font-black uppercase text-white">
+            Frequently Asked <span class="text-chrome-gradient">Questions</span>
+          </h2>
+        </div>
+
+        <div class="space-y-4">
+          
+          <div class="card-dark p-0 faq-item">
+            <button class="w-full text-left p-5 flex items-center justify-between font-display text-xl font-bold uppercase text-white faq-trigger">
+              <span>Do you offer online coaching outside Coimbatore?</span>
+              <span class="faq-icon text-white transition-transform duration-300">▼</span>
+            </button>
+            <div class="px-5 pb-5 text-slate-400 text-sm leading-relaxed hidden faq-content border-t border-white/5 pt-3">
+              Yes! We coach clients globally across India, Singapore, UAE, UK, and the USA. You get custom diet plans (South Indian, North Indian, or continental), video workout form analysis, and weekly accountability check-ins directly via WhatsApp.
+            </div>
+          </div>
+
+          <div class="card-dark p-0 faq-item">
+            <button class="w-full text-left p-5 flex items-center justify-between font-display text-xl font-bold uppercase text-white faq-trigger">
+              <span>Is Home Personal Training available in Coimbatore?</span>
+              <span class="faq-icon text-white transition-transform duration-300">▼</span>
+            </button>
+            <div class="px-5 pb-5 text-slate-400 text-sm leading-relaxed hidden faq-content border-t border-white/5 pt-3">
+              Yes, Venkatesh provides private in-person coaching at client residences and selected gyms within Coimbatore (e.g. RS Puram, Race Course, Peelamedu, Gandhipuram, Saibaba Colony). Slots are strictly limited to maintain highest coaching quality.
+            </div>
+          </div>
+
+          <div class="card-dark p-0 faq-item">
+            <button class="w-full text-left p-5 flex items-center justify-between font-display text-xl font-bold uppercase text-white faq-trigger">
+              <span>Will I need to starve or eat only boiled chicken and rice?</span>
+              <span class="faq-icon text-white transition-transform duration-300">▼</span>
+            </button>
+            <div class="px-5 pb-5 text-slate-400 text-sm leading-relaxed hidden faq-content border-t border-white/5 pt-3">
+              Absolutely not. Our nutrition protocols work around your authentic daily food culture (vegetarian, eggetarian, or non-vegetarian). We incorporate traditional Tamil Nadu foods, home-cooked meals, and balanced macros that you can sustain for life.
+            </div>
+          </div>
+
+          <div class="card-dark p-0 faq-item">
+            <button class="w-full text-left p-5 flex items-center justify-between font-display text-xl font-bold uppercase text-white faq-trigger">
+              <span>How quickly will I receive a response after submitting the consultation?</span>
+              <span class="faq-icon text-white transition-transform duration-300">▼</span>
+            </button>
+            <div class="px-5 pb-5 text-slate-400 text-sm leading-relaxed hidden faq-content border-t border-white/5 pt-3">
+              Coach Venkatesh personally reviews all applications and contacts you on WhatsApp or phone within 24 hours to discuss program fit, timeline, and onboarding.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. FINAL DRAMATIC CTA -->
+    <section class="py-24 bg-gradient-to-b from-[#070709] via-[#141419] to-[#070709] border-t border-white/10 text-center relative overflow-hidden">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+        
+        <div class="w-16 h-1 bg-white text-black mx-auto rounded-full"></div>
+
+        <h2 class="font-display text-5xl sm:text-7xl font-black uppercase tracking-tight text-white leading-tight">
+          Your Goal. Your Plan. <br />
+          <span class="text-chrome-gradient">Your Transformation.</span>
+        </h2>
+
+        <p class="text-slate-300 text-lg max-w-xl mx-auto font-light">
+          Stop guessing in the gym. Start training with a personalized system built for your body, lifestyle, and ambitions.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="consultation.html" class="btn-primary text-base py-3 px-8">Start Your Transformation</a>
+          <a href="https://wa.me/919876543210?text=Hi%20TeamVenky,%20I'm%20interested%20in%201-to-1%20fitness%20coaching." target="_blank" class="btn-whatsapp py-3 px-8">Chat on WhatsApp</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#050507] border-t border-white/10 py-16 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        
+        <!-- Brand & Bio -->
+        <div class="space-y-4 md:col-span-2">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/teamvenky-logo.png" alt="TEAMVENKY" class="h-10 w-auto object-contain" />
+          </div>
+          <p class="text-slate-400 text-sm max-w-md">
+            Elite Personal Fitness Coaching based in Coimbatore, Tamil Nadu. Dedicated 1-to-1 online and offline mentorship for fat loss, muscle building, and natural athletic performance.
+          </p>
+          <div class="flex items-center gap-2 text-xs font-display font-bold uppercase tracking-widest text-white">
+            <span>📍 Coimbatore, Tamil Nadu, India</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-display text-white font-bold uppercase tracking-wider text-base mb-4">Quick Links</h4>
+          <ul class="space-y-2 font-display text-sm uppercase tracking-wide">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Coach Venkatesh</a></li>
+            <li><a href="programs.html" class="hover:text-white transition-colors">Coaching Programs</a></li>
+            <li><a href="transformations.html" class="hover:text-white transition-colors">Transformations Gallery</a></li>
+            <li><a href="consultation.html" class="hover:text-white transition-colors">Book Consultation</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Social -->
+        <div>
+          <h4 class="font-display text-white font-bold uppercase tracking-wider text-base mb-4">Connect</h4>
+          <ul class="space-y-2 text-sm">
+            <li>Instagram: <a href="https://instagram.com/venkateshkofficial" target="_blank" class="text-white font-bold hover:underline">@venkateshkofficial</a></li>
+            <li>Location: Coimbatore, Tamil Nadu</li>
+            <li>Response Time: Within 24 Hours</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 TeamVenky. All rights reserved. Tamil Nadu, India.</p>
+        <p>Crafted for Elite Athletic Performance & Natural Bodybuilding.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Direct WhatsApp Button (Desktop) -->
+  <a href="https://wa.me/919876543210?text=Hi%20TeamVenky,%20I'm%20interested%20in%201-to-1%20fitness%20coaching." target="_blank" class="floating-whatsapp" aria-label="Chat with TeamVenky on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.03C9.36 7.03 9.08 7.09 8.84 7.35C8.61 7.61 7.94 8.23 7.94 9.5C7.94 10.77 8.86 12 9 12.18C9.13 12.35 10.8 14.93 13.35 16.03C15.48 16.95 15.91 16.76 16.37 16.72C16.83 16.68 17.85 16.12 18.06 15.53C18.27 14.94 18.27 14.43 18.21 14.33C18.15 14.23 17.98 14.17 17.72 14.04C17.47 13.92 16.23 13.31 16 13.23C15.77 13.14 15.61 13.1 15.44 13.35C15.28 13.61 14.8 14.17 14.65 14.34C14.5 14.51 14.36 14.53 14.1 14.41C13.85 14.28 13.04 14.02 12.09 13.17C11.35 12.5 10.85 11.68 10.71 11.43C10.56 11.17 10.7 11.04 10.82 10.91C10.94 10.79 11.08 10.6 11.21 10.45C11.34 10.3 11.38 10.19 11.47 10.02C11.55 9.85 11.51 9.71 11.45 9.58C11.39 9.45 10.92 8.31 10.73 7.85C10.54 7.4 10.35 7.46 10.2 7.45C10.06 7.44 9.9 7.44 9.73 7.44C9.57 7.44 9.36 7.03 9.53 7.03Z"/></svg>
+    <span>Chat with Venky</span>
+  </a>
+
+  <!-- Mobile Sticky Bottom Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="https://wa.me/919876543210?text=Hi%20TeamVenky,%20I'm%20interested%20in%201-to-1%20fitness%20coaching." target="_blank" class="btn-whatsapp flex-1 py-3 text-xs sm:text-sm text-center">
+      WhatsApp
+    </a>
+    <a href="consultation.html" class="btn-primary flex-1 py-3 text-xs sm:text-sm text-center">
+      Start Coaching
+    </a>
+  </div>
+
+  <!-- Master JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

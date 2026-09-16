@@ -1,0 +1,11 @@
+# Raw source image archive
+trainer img source/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Temporary & editor artifacts
+*.log
+.vscode/
+.idea/

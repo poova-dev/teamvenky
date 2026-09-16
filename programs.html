@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coaching Programs | TeamVenky - Fat Loss, Muscle Gain & Contest Prep</title>
+  <meta name="description" content="Explore TeamVenky's 6 specialized fitness programs: Fat Loss, Lean Muscle Hypertrophy, Natural Bodybuilding, Body Transformation, Online Coaching, and Coimbatore Home Personal Training." />
+  
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800&family=Manrope:wght@400;500;600;700;800&family=Mukta+Malar:wght@500;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              darkest: '#070709',
+              dark: '#0d0d11',
+              surface: '#141419',
+              card: '#181820',
+              gold: '#f59e0b',
+              goldHover: '#d97707',
+              saffron: '#f97316',
+              crimson: '#e11d48'
+            }
+          },
+          fontFamily: {
+            display: ['"Barlow Condensed"', 'sans-serif'],
+            body: ['"Manrope"', 'sans-serif'],
+            tamil: ['"Mukta Malar"', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Custom Design System Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-[#0d0d11] text-slate-100 font-body selection:bg-white text-black selection:text-black">
+
+  <div class="ambient-glow-top"></div>
+
+  <!-- Header / Navigation -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#0d0d11]/90 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo (Official TeamVenky Logo) -->
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="assets/images/teamvenky-logo.png" alt="TEAMVENKY" class="h-9 sm:h-11 w-auto object-contain" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center gap-8 font-display text-base font-bold tracking-wider uppercase">
+        <a href="index.html" class="text-slate-300 hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="text-slate-300 hover:text-white transition-colors">About Coach</a>
+        <a href="programs.html" class="text-white transition-colors">Programs</a>
+        <a href="transformations.html" class="text-slate-300 hover:text-white transition-colors">Transformations</a>
+        <a href="consultation.html" class="text-slate-300 hover:text-white transition-colors">Consultation</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="consultation.html" class="btn-primary py-2.5 px-5 text-sm">Start Your Transformation</a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobileNavToggle" aria-label="Open Navigation Menu" class="lg:hidden p-2 rounded-md bg-white/5 text-slate-200 hover:text-white hover:bg-white/10 transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div id="mobileNavMenu" class="hidden fixed inset-0 z-[100] bg-[#070709]/98 backdrop-blur-xl flex flex-col justify-between p-6 overflow-y-auto">
+    <div class="flex items-center justify-between border-b border-white/10 pb-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="assets/images/teamvenky-logo.png" alt="TEAMVENKY" class="h-8 w-auto object-contain" />
+      </a>
+      <button id="mobileNavClose" aria-label="Close Navigation Menu" class="p-2 rounded-full bg-white/10 text-slate-300 hover:text-white">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="flex flex-col gap-5 py-8 font-display text-2xl font-bold uppercase tracking-wide">
+      <a href="index.html" class="text-slate-200 hover:text-white">Home</a>
+      <a href="about.html" class="text-slate-200 hover:text-white">About Venkatesh</a>
+      <a href="programs.html" class="text-white">Coaching Programs</a>
+      <a href="transformations.html" class="text-slate-200 hover:text-white">Client Transformations</a>
+      <a href="consultation.html" class="text-slate-200 hover:text-white">Book Consultation</a>
+    </nav>
+
+    <div class="flex flex-col gap-3 pt-6 border-t border-white/10">
+      <a href="consultation.html" class="btn-primary w-full text-center">Start Your Transformation</a>
+    </div>
+  </div>
+
+  <main class="pt-28 pb-20">
+
+    <!-- Hero / Program Overview -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
+      <div class="tn-badge mx-auto mb-4">
+        <span class="tn-dot"></span>
+        <span>Science & High Accountability</span>
+      </div>
+      <h1 class="font-display text-5xl sm:text-7xl font-black uppercase text-white tracking-tight">
+        Coaching Programs Built <br />
+        <span class="text-chrome-gradient">Around Your Lifestyle</span>
+      </h1>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto mt-4 font-light">
+        Every program includes custom nutrition modeling, progressive exercise periodization, and weekly personal video feedback from Coach Venkatesh K.
+      </p>
+    </section>
+
+    <!-- Program 1: Fat Loss & Shred -->
+    <section id="fat-loss" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div class="card-dark border-white/10 p-8 sm:p-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-5">
+            <div class="rounded-xl overflow-hidden border border-white/15 h-80 sm:h-96">
+              <img src="assets/images/fat-loss.jpg" alt="Fat Loss & Shred Program" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-display uppercase tracking-widest text-white font-bold">Program 01 • 12 to 16 Weeks</span>
+            <h2 class="font-display text-3xl sm:text-5xl font-black uppercase text-white">Fat Loss & Metabolic Reset</h2>
+            <p class="text-slate-300 leading-relaxed">
+              Targeted for individuals looking to drop 5kg to 25kg of body fat without destroying their resting metabolic rate or giving up cultural staple foods. We formulate an individualized caloric deficit that spares your lean muscle.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> South Indian meal adaptation
+              </div>
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> Muscle-preserving resistance training
+              </div>
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> Daily NEAT & step target strategy
+              </div>
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> Weekly photo & measurement check-ins
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="consultation.html" class="btn-primary">Apply for Fat Loss Coaching</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program 2: Lean Muscle Gain -->
+    <section id="muscle-gain" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div class="card-dark border-white/10 p-8 sm:p-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 order-2 lg:order-1 space-y-4">
+            <span class="text-xs font-display uppercase tracking-widest text-white font-bold">Program 02 • 16 to 24 Weeks</span>
+            <h2 class="font-display text-3xl sm:text-5xl font-black uppercase text-white">Lean Muscle Hypertrophy</h2>
+            <p class="text-slate-300 leading-relaxed">
+              For skinny guys or intermediate lifters who have plateaued in strength and size. We employ scientific volume management, mechanical tension optimization, and clean caloric surplus planning.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> Exercise selection based on joint anatomy
+              </div>
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> Progressive overload tracking spreadsheets
+              </div>
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> Optimized protein & carb timing
+              </div>
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> Video form correction for big lifts
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="consultation.html" class="btn-primary">Apply for Muscle Gain Coaching</a>
+            </div>
+          </div>
+          <div class="lg:col-span-5 order-1 lg:order-2">
+            <div class="rounded-xl overflow-hidden border border-white/15 h-80 sm:h-96">
+              <img src="assets/images/muscle-gain.jpg" alt="Lean Muscle Gain Program" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program 3: Natural Bodybuilding & Contest Prep -->
+    <section id="contest-prep" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div class="card-dark border-white/20 p-8 sm:p-12 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-5">
+            <div class="rounded-xl overflow-hidden border border-white/20 h-80 sm:h-96">
+              <img src="assets/images/contest-prep.jpg" alt="Contest Preparation" class="w-full h-full object-cover" />
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-display uppercase tracking-widest text-red-500 font-bold">Program 03 • Athletic Stage Prep</span>
+            <h2 class="font-display text-3xl sm:text-5xl font-black uppercase text-white">Natural Bodybuilding & Posing</h2>
+            <p class="text-slate-300 leading-relaxed">
+              Step on stage with supreme confidence, striated conditioning, and stage presence. Guided directly by Venkatesh's contest track record, covering prep phases, water & sodium protocols, and mandatory posing routines.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> Peak week water, carb & salt manipulation
+              </div>
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> Mandatory posing coaching & transitions
+              </div>
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> 100% WADA compliant natural protocols
+              </div>
+              <div class="flex items-center gap-2 text-sm text-slate-300">
+                <span class="text-white font-bold">✓</span> Post-contest reverse dieting system
+              </div>
+            </div>
+            <div class="pt-4">
+              <a href="consultation.html" class="btn-primary">Enquire for Contest Prep</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program 4, 5, 6 Overview Grid -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Total Transformation -->
+        <div id="transformation" class="card-dark flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="h-48 rounded overflow-hidden">
+              <img src="assets/images/transformation-05.jpg" alt="Body Transformation" class="w-full h-full object-cover" />
+            </div>
+            <h3 class="font-display text-2xl font-bold uppercase text-white">Total Body Recomp</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Simultaneously lose body fat and add muscle tone. Perfect for people who feel "skinny fat" or want an end-to-end transformation.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-white/10 mt-6">
+            <a href="consultation.html" class="btn-primary w-full text-center text-sm py-2.5">Join Program</a>
+          </div>
+        </div>
+
+        <!-- Online Coaching -->
+        <div id="online" class="card-dark flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="h-48 rounded overflow-hidden">
+              <img src="assets/images/online-coaching.jpg" alt="Online Coaching" class="w-full h-full object-cover" />
+            </div>
+            <h3 class="font-display text-2xl font-bold uppercase text-white">Online 1-to-1 Elite</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Full coaching accessibility no matter your city or country. Seamless workout logging, diet recalibration, and weekly check-in videos.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-white/10 mt-6">
+            <a href="consultation.html" class="btn-primary w-full text-center text-sm py-2.5">Start Online</a>
+          </div>
+        </div>
+
+        <!-- Offline & Home Personal Training -->
+        <div id="offline" class="card-dark flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="h-48 rounded overflow-hidden">
+              <img src="assets/images/home-training.jpg" alt="Home Training Coimbatore" class="w-full h-full object-cover" />
+            </div>
+            <h3 class="font-display text-2xl font-bold uppercase text-white">Coimbatore Home PT</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Coach Venkatesh travels to your residence or private facility in Coimbatore for hands-on, high-intensity personal sessions.
+            </p>
+          </div>
+          <div class="pt-6 border-t border-white/10 mt-6">
+            <a href="consultation.html" class="btn-primary w-full text-center text-sm py-2.5">Enquire Home PT</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#050507] border-t border-white/10 py-12 text-slate-400 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <img src="assets/images/teamvenky-logo.png" alt="TEAMVENKY" class="h-8 w-auto object-contain" />
+        <span class="font-display font-black text-lg tracking-wider text-white uppercase">COIMBATORE</span>
+      </div>
+      <div class="flex items-center gap-6 font-display uppercase tracking-wider text-xs">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="about.html" class="hover:text-white">About</a>
+        <a href="transformations.html" class="hover:text-white">Transformations</a>
+        <a href="consultation.html" class="hover:text-white">Consultation</a>
+      </div>
+      <p class="text-xs text-slate-500">© 2026 TeamVenky. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Floating Direct WhatsApp Button (Desktop) -->
+  <a href="https://wa.me/919876543210?text=Hi%20TeamVenky,%20I'm%20interested%20in%201-to-1%20fitness%20coaching." target="_blank" class="floating-whatsapp" aria-label="Chat with TeamVenky on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.03C9.36 7.03 9.08 7.09 8.84 7.35C8.61 7.61 7.94 8.23 7.94 9.5C7.94 10.77 8.86 12 9 12.18C9.13 12.35 10.8 14.93 13.35 16.03C15.48 16.95 15.91 16.76 16.37 16.72C16.83 16.68 17.85 16.12 18.06 15.53C18.27 14.94 18.27 14.43 18.21 14.33C18.15 14.23 17.98 14.17 17.72 14.04C17.47 13.92 16.23 13.31 16 13.23C15.77 13.14 15.61 13.1 15.44 13.35C15.28 13.61 14.8 14.17 14.65 14.34C14.5 14.51 14.36 14.53 14.1 14.41C13.85 14.28 13.04 14.02 12.09 13.17C11.35 12.5 10.85 11.68 10.71 11.43C10.56 11.17 10.7 11.04 10.82 10.91C10.94 10.79 11.08 10.6 11.21 10.45C11.34 10.3 11.38 10.19 11.47 10.02C11.55 9.85 11.51 9.71 11.45 9.58C11.39 9.45 10.92 8.31 10.73 7.85C10.54 7.4 10.35 7.46 10.2 7.45C10.06 7.44 9.9 7.44 9.73 7.44C9.57 7.44 9.36 7.03 9.53 7.03Z"/></svg>
+    <span>Chat with Venky</span>
+  </a>
+
+  <!-- Mobile Sticky Bottom Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="https://wa.me/919876543210?text=Hi%20TeamVenky,%20I'm%20interested%20in%201-to-1%20fitness%20coaching." target="_blank" class="btn-whatsapp flex-1 py-3 text-xs sm:text-sm text-center">
+      WhatsApp
+    </a>
+    <a href="consultation.html" class="btn-primary flex-1 py-3 text-xs sm:text-sm text-center">
+      Start Coaching
+    </a>
+  </div>
+
+  <!-- Master JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
