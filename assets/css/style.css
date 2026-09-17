@@ -468,3 +468,173 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 44px;
   }
 }
+
+/* ==========================================================================
+   MOCKUP-EXACT UI STYLES (MATCHING USER REFERENCE SCREENSHOT)
+   ========================================================================== */
+
+/* 1. Hero Background & Vignette */
+.hero-mockup-bg {
+  background-image: linear-gradient(90deg, #050507 0%, rgba(5, 5, 7, 0.94) 38%, rgba(5, 5, 7, 0.65) 68%, rgba(5, 5, 7, 0.45) 100%),
+                    linear-gradient(180deg, rgba(5, 5, 7, 0.5) 0%, transparent 40%, rgba(5, 5, 7, 0.95) 90%, #050507 100%),
+                    url('../images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 768px) {
+  .hero-mockup-bg {
+    background-image: linear-gradient(180deg, rgba(5, 5, 7, 0.85) 0%, rgba(5, 5, 7, 0.92) 50%, #050507 100%),
+                      url('../images/hero-bg.jpg');
+    background-position: center top;
+  }
+}
+
+/* 2. Trust Bar Online / Offline Block */
+.mode-badge-box {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: all var(--transition-fast);
+}
+.mode-badge-box:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* 3. Goal Cards (6-Grid) */
+.goal-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #0e0e13;
+  aspect-ratio: 4 / 3;
+  transition: all var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.goal-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.08);
+}
+.goal-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1;
+}
+.goal-card:hover .goal-card-img {
+  transform: scale(1.06);
+}
+.goal-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 5, 7, 0.1) 0%, rgba(5, 5, 7, 0.5) 45%, rgba(5, 5, 7, 0.95) 90%, #050507 100%);
+  z-index: 2;
+  transition: background var(--transition-smooth);
+}
+.goal-card:hover .goal-card-overlay {
+  background: linear-gradient(180deg, rgba(5, 5, 7, 0.05) 0%, rgba(5, 5, 7, 0.4) 40%, rgba(5, 5, 7, 0.98) 85%, #050507 100%);
+}
+.goal-card-content {
+  position: relative;
+  z-index: 3;
+  padding: 1.25rem 1.25rem 1rem;
+}
+
+/* 4. Lifestyle Comparison Cards */
+.lifestyle-card {
+  background: #0d0d12;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+}
+.lifestyle-card:hover {
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+  transform: translateY(-4px);
+}
+.lifestyle-card.featured {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: linear-gradient(180deg, #13131a 0%, #0d0d12 100%);
+}
+
+/* 5. Transformation Showcase Cards */
+.trans-card {
+  background: #0d0d12;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all var(--transition-smooth);
+}
+.trans-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+}
+.trans-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: #07070a;
+}
+.trans-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.trans-card:hover .trans-img {
+  transform: scale(1.03);
+}
+
+/* 6. Testimonial Card */
+.testimonial-card {
+  background: #0d0d12;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-smooth);
+}
+.testimonial-card:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* 7. Step Linear Numbers */
+.step-number {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: -0.04em;
+  transition: color var(--transition-smooth);
+}
+.step-card:hover .step-number {
+  color: #ffffff;
+}
